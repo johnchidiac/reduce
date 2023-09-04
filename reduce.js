@@ -54,8 +54,9 @@ Examples:
 */
 
 function addKeyAndValue(arr, key, value) {
-    return arr.reduce((acc, obj) => {
-        console.log(acc[obj]);
+    return arr.reduce((acc, obj, i) => {
+        acc[i][key] = value;
+        return acc;
     })
 }
 
